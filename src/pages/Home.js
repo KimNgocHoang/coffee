@@ -1,9 +1,9 @@
 import React from 'react'
-
+import CoffeeList from '../components/CoffeeList';
 const Home = () => {
   return (
-    <div>
-      
+    <div className="home">
+      <CoffeeList />
     </div>
   )
 }
