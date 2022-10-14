@@ -77,9 +77,6 @@ code {
 .section-about img {
   width: 200px;
 }
-.about-detail {
-
-}
 .about-detail p {
   text-align: center;
 }
@@ -105,9 +102,46 @@ code {
   color: #fff;
 }
 
+/* Search */
+.search {
+  margin-top: 56px;
+  margin-bottom: 80px;;
+}
+.search-form {
+  width: 50vw;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  /* background-color: rgb(41, 22, 8); */
+}
+.form-control label {
+  display: block;
+  font-size: 21px;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+  font-weight: bold;
+  color: rgba(210, 105, 30, 0.781);
+}
+.form-control input {
+  width: 97%;
+  font-size: 21px;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: rgb(241, 245, 248);
+  border: none;
+}
+.form-control input:focus {
+  outline: none;
+  background-color: rgba(210, 105, 30, 0.781);
+}
+.result-search{
+  text-align: center;
+  font-size: 24px;
+}
 /* Coffees */
 .coffee-list {
-  padding: 80px 0;
+  padding:80px 0;
   background: rgba(148, 84, 38, 0.801);
 
 }
@@ -144,6 +178,8 @@ code {
 }
 .coffee .img-coffee img {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -154,15 +190,97 @@ code {
   font-size: 32px;
   margin-top: 12px;
 }
+.btn-back,
 .coffee-detail a {
   background-color: rgb(219, 145, 48);
-  padding: 5px 12px;
+  padding: 8px 12px;
   letter-spacing: 4px;
   text-decoration: none;
   border-radius: 4px;
   color: white;
 }
+.btn-back:hover,
 .coffee-detail a:hover {
   color: rgb(219, 145, 48);
   background-color: rgba(219, 145, 48, 0.3);
+}
+/* Single Coffee */
+.single-coffee {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: left;
+  align-items: center;
+}
+.single-drink {
+  display: flex;
+  margin-top: 54px;
+  justify-content: center;
+}
+.single-drink img {
+  width: 30%;
+  border-radius: 4px;
+}
+.single-drink-info {
+  margin-left: 42px;
+}
+.single-drink-info p {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.single-drink-info .data {
+  line-height: 40px;
+  padding: 5px;
+  background-color: rgb(250, 210, 159);
+  border-radius: 4px;
+  color: rgb(219, 145, 48);
+  font-weight: bold;
+  margin-right: 8px;
+}
+.data-ingredient {
+  margin-right: 16px;
+}
+/* Error */
+.error {
+  width: 100%;
+  text-align: center;
+  margin-top: 48px;
+}
+/* Loading */
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgba(210, 105, 30, 0.781);
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
