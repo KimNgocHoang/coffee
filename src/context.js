@@ -13,8 +13,9 @@ const AppProvider = ( {children} ) => {
         setLoading(true);
         try {
             const response = await fetch(url)
-            const data = await response.json();
-            // console.log(data);
+            const data = (await response.json()).slice(0, 20);
+            
+            console.log(data);
             if (searchItem !== '') {
                 const cf = data.filter((item) => {
                     return Object.values(item.title).join('').toLowerCase().includes(searchItem.toLowerCase());

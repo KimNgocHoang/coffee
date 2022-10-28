@@ -10,13 +10,6 @@ const CoffeeList = () => {
   if(loading){
     return <Loading />
   }
-  // if (coffees.length < 1) {
-  //   return (
-  //     <div className="result-search">
-  //       <h3>No Coffee matched your search results</h3>
-  //     </div>
-  //   )
-  // }
   return (
     <section className='coffee-list'>
       <h3 className='coffee-list-title'>COFFEES</h3>
